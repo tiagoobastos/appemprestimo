@@ -9,36 +9,33 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Listagem de Livros</title>
 </head>
 <body>
 
   <div class="container" >
 	
-	<h2>Page List Todo</h2>
-	<h3><a href="<c:url value="/todos/form" />"  >Criar nova tarefa</a></h3>
+	<h1>Listagem de Livros</h1>
+	<h3><a href="<c:url value="/livros/form" />"  >Cadastar livro</a></h3>
 	
 	<table class="table" >
 	   <thead class="table-dark">
 		<tr>
-			<th>Tarefa</th>
-			<th>Status</th>
-			<th>Ação</th>
+			<th>Título</th>
+			<th>Gênero</th>
+			<th>Autor</th>
+			<th>Emprestado?</th>
 		</tr>
 	<thead>
 	<tbody>
-		<c:forEach var="todo" items="${listaTodos}" >
+		<c:forEach var="livro" items="${listaTodos}" >
 			<tr>
-				<td>${todo.tarefa}</td>
-				<td>${todo.pronto}</td>
-	<td>
-	
-	<a href="<c:url value="/todos/edit/${todo.id}" />" >Edit</a>
-	|
-	<a href="<c:url value="/todos/edit/${todo.id}" />" >Delete</a>
-	
-	
-	</td>
+				<td>${livro.tarefa}</td>
+				<td>${livro.pronto}</td>
+	            <td>
+					<a href="<c:url value="/livros/edit/${todo.id}" />" >Edit</a>
+					<a href="<c:url value="/livros/edit/${todo.id}" />" >Delete</a>
+				</td>
 			</tr>
 		</c:forEach>
 		</tbody>

@@ -12,8 +12,8 @@
 
 	<div class="container-fluid">
 
-		<h2>Hello World!</h2>
-		<a href="todos/list">Todos</a> <br /> <a href="todos/form">Criar nova tarefa</a>
+		<h2>Empréstimo de Livros</h2>
+		<a href="livros/list">Listagem de Livros</a> <br /> <a href="livros/form">Cadastrar Livro</a>
 
 	</div>
 

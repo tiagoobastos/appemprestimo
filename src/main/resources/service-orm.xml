@@ -11,7 +11,7 @@
            http://www.springframework.org/schema/tx  
            http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package="br.edu.infnet.todoapp" />
+	<context:component-scan base-package="br.edu.infnet.appemprestimo" />
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

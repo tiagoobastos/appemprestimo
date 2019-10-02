@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp.app.controller;
+package br.edu.infnet.appemprestimo.app.controller;
 
 import java.util.List;
 import java.util.Objects;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.edu.infnet.todoapp.app.model.Todo;
-import br.edu.infnet.todoapp.app.model.persistence.TodoDao;
-import br.edu.infnet.todoapp.app.model.persistence.UsuarioDao;
+import br.edu.infnet.appemprestimo.app.model.Todo;
+import br.edu.infnet.appemprestimo.app.model.persistence.TodoDao;
+import br.edu.infnet.appemprestimo.app.model.persistence.UsuarioDao;
 
 
 
