@@ -25,16 +25,22 @@
 			<th>Gênero</th>
 			<th>Autor</th>
 			<th>Emprestado?</th>
+			<th>Ações</th>
 		</tr>
 	<thead>
 	<tbody>
-		<c:forEach var="livro" items="${listaTodos}" >
+		<c:forEach var="livro" items="${listaLivros}" >
 			<tr>
-				<td>${livro.tarefa}</td>
-				<td>${livro.pronto}</td>
+				<td>${livro.titulo}    </td>
+				<td>${livro.genero}    </td>
+				<td>${livro.autor}     </td>
+				<td>${livro.emprestado}</td>
+				
 	            <td>
-					<a href="<c:url value="/livros/edit/${todo.id}" />" >Edit</a>
-					<a href="<c:url value="/livros/edit/${todo.id}" />" >Delete</a>
+	                
+					<a href="<c:url value="/livros/edit/${livro.id}" />" ><button type="button" class="btn btn-primary"  >Editar</button></a>
+					
+					<a href="<c:url value="/livros/delete/${livro.id}" />" ><button type="button" class="btn btn-danger">Excluir</button></a>
 				</td>
 			</tr>
 		</c:forEach>

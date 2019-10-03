@@ -10,16 +10,32 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Editar Livros</title>
 </head>
 <body>
  
-   <h2>Editar Tarefa</h2>
-   <form action="<c:url value="/todos/update" />" method="post">
+   <h2>Editar Livro</h2>
+   <form action="<c:url value="/livros/update" />" method="post">
    
-      <input type="hidden" value="${todo.id}" name="id" > 
-      <label for="tarefa">Tarefa</label>
-      <input type="text" value="${todo.tarefa}" name="tarefa" id="tarefa" size="200">
+          <input type="hidden" value="${livro.id}" name="id">
+          <div class="input-group mb-3" > 
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Título</span>
+		  </div>
+		  <input type="text" class="form-control" value="${livro.titulo}" placeholder="Informe o título" aria-label="Username"  aria-describedby="basic-addon1" name="titulo" id="titulo">
+	  </div>
+      <div class="input-group mb-3" > 
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Gênero</span>
+		  </div>
+		  <input type="text" class="form-control" value="${livro.genero}" placeholder="Informe o gênero" aria-label="Genero"  aria-describedby="basic-addon1" name="genero" id="genero">
+	  </div>
+	  <div class="input-group mb-3" > 
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Autor</span>
+		  </div>
+		  <input type="text" class="form-control" value="${livro.autor}" placeholder="Informe o autor" aria-label="Autor"  aria-describedby="basic-addon1" name="autor" id="autor">
+	  </div>
       <br/>
       
       <input type="submit" value="Salvar">

@@ -8,34 +8,34 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.edu.infnet.appemprestimo.app.model.Todo;
-import br.edu.infnet.appemprestimo.app.model.persistence.TodoDao;
+import br.edu.infnet.appemprestimo.app.model.Livro;
+import br.edu.infnet.appemprestimo.app.model.persistence.LivroDao;
 import br.edu.infnet.appemprestimo.app.model.persistence.UsuarioDao;
 
 
 
 @Service
-public class TodoService {
+public class LivroService {
  
 	@Autowired
-	private TodoDao dao;
+	private LivroDao dao;
 
-	public TodoService() {
+	public LivroService() {
 	}
 	
 	@Transactional(propagation = Propagation.NEVER)
-	public List<Todo> getTodos() {
+	public List<Livro> getAllLivros() {
 		return dao.getAll();
 	}
 
 	@Transactional(propagation = Propagation.REQUIRED)
-	public void persite(Todo todo) {
-		dao.salvar(todo);
+	public void persite(Livro livro) {
+		dao.salvar(livro);
 	}
 
 	@Transactional(propagation = Propagation.REQUIRED)
-	public void update(Todo todo) {
-		dao.editar(todo);
+	public void update(Livro livro) {
+		dao.editar(livro);
 	}
 
 	@Transactional(propagation = Propagation.REQUIRED)
@@ -44,18 +44,18 @@ public class TodoService {
 	}
 
 	@Transactional(propagation = Propagation.NEVER)
-	public Todo getTodo(String id) {
-		Objects.requireNonNull(id, "vai para l√° com esse id nullo");
+	public Livro getLivro(String id) {
+		Objects.requireNonNull(id, "ID n„o pode ser nulo!");
 		
 		Integer integer = Integer.valueOf(id);
 		return dao.findOne(integer);
 	}
 
-	public TodoDao getDao() {
+	public LivroDao getDao() {
 		return dao;
 	}
 
-	public void setDao(TodoDao dao) {
+	public void setDao(LivroDao dao) {
 		this.dao = dao;
 	}
 

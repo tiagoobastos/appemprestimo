@@ -15,6 +15,15 @@ public class Usuario {
 	private String nome;
 	
 	private String email;
+	
+	
+	public Usuario() {}
+
+	public Usuario(String nome, String email) {
+		super();
+		this.nome = nome;
+		this.email = email;
+	}
 
 	public Integer getId() {
 		return id;
@@ -39,7 +48,6 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
 	
 }
