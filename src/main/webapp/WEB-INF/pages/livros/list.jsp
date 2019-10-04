@@ -21,26 +21,31 @@
 	<table class="table" >
 	   <thead class="table-dark">
 		<tr>
-			<th>Título</th>
-			<th>Gênero</th>
-			<th>Autor</th>
-			<th>Emprestado?</th>
-			<th>Ações</th>
+			<th class="text-center">Título</th>
+			<th class="text-center">Gênero</th>
+			<th class="text-center">Autor</th>
+			<th class="text-center">Disponível?</th>
+			<th class="text-center">Ações</th>
 		</tr>
 	<thead>
 	<tbody>
 		<c:forEach var="livro" items="${listaLivros}" >
 			<tr>
-				<td>${livro.titulo}    </td>
-				<td>${livro.genero}    </td>
-				<td>${livro.autor}     </td>
-				<td>${livro.emprestado}</td>
-				
-	            <td>
-	                
-					<a href="<c:url value="/livros/edit/${livro.id}" />" ><button type="button" class="btn btn-primary"  >Editar</button></a>
-					
-					<a href="<c:url value="/livros/delete/${livro.id}" />" ><button type="button" class="btn btn-danger">Excluir</button></a>
+				<td align="center">${livro.titulo}    </td>
+				<td align="center">${livro.genero}    </td>
+				<td align="center">${livro.autor}     </td>
+				<td>${livro.emprestado} </td>
+				<c:choose>
+					<c:when test="${livro.emprestado eq false}">
+						<td align="center"><img src="<c:url value="/resources/img/yes.png"/>"/></td>
+					</c:when>
+					<c:when test="${livro.emprestado eq true}">
+						<td align="center"><img src="<c:url value="/resources/img/no.png"/>"/></td>
+					</c:when>
+				</c:choose>	
+	             <td align="center">   
+					<a href="<c:url value="/livros/edit/${livro.id}"   />" ><button type="button" class="btn btn-primary"  >Editar</button></a>
+					<a href="<c:url value="/livros/delete/${livro.id}" />" ><button type="button" class="btn btn-danger"   >Excluir</button></a>
 				</td>
 			</tr>
 		</c:forEach>
