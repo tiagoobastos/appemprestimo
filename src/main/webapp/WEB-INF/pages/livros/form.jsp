@@ -29,20 +29,6 @@
    
    <form action="<c:url value="/livros/add" />" method="post">
       
-      <!--  
-      <label for="tarefa">Título</label>
-      <input type="text" name="titulo" id="titulo" size="80">
-      
-      <label for="tarefa">Gênero</label>
-      <input type="text" name="genero" id="genero" size="80">
-      
-      <label for="tarefa">Autor</label>
-      <input type="text" name="autor" id="autor" size="80">
-      
-      <label for="tarefa">Emprestado?</label>
-      <input type="text" name="emprestado" id="emprestado" size="80">      
-      <br/>
-      -->
       <div class="input-group mb-3" > 
 		  <div class="input-group-prepend">
 		    <span class="input-group-text" id="basic-addon1">Título</span>
